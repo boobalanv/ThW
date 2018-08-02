@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SpaceMetalSeller.UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class RomanNumeralConventionTest
     {
         [TestMethod]
         public void TestMethod1()
