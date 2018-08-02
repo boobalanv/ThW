@@ -5,11 +5,11 @@ using System.Text;
 
 namespace SpaceMetalSeller
 {
-    public class RomanNumeralConvention
+    public static class RomanNumeralConvention
     {
-        public Dictionary<string, int> RomanNumerals = new Dictionary<string, int>();
+        public static Dictionary<string, int> RomanNumerals = new Dictionary<string, int>();
 
-        public RomanNumeralConvention()
+        static RomanNumeralConvention()
         {
             RomanNumerals.Add("I", 1);
             RomanNumerals.Add("V", 5);
@@ -19,25 +19,144 @@ namespace SpaceMetalSeller
             RomanNumerals.Add("D", 500);
             RomanNumerals.Add("M", 1000);
         }
-        
 
 
-        int ConvertRomanNumeralToBase10(string romanNumeral)
+
+        public static int ConvertRomanNumeralToBase10(string romanNumeral)
         {
             string[] romanNumerals = romanNumeral.Split();
+            int totalSum = 0;
+            if (IsValidRomanNumeral(romanNumerals))
+            {
+                for (int i = 0; i < romanNumerals.Length; i++)
+                {
+                    string firstChar = romanNumerals[i], secondeChar = "";
+                    int firstNo = RomanNumerals[firstChar];
+                    int secondNo = 0;
+                    if (i + 1 <= romanNumerals.Length - 1)
+                    {
+                        secondNo = RomanNumerals[romanNumerals[i + 1]];
+                        secondeChar = romanNumerals[i + 1];
+                        i++;
+                    }
+
+                    if (secondeChar == "")
+                    {
+                        totalSum += firstNo;
+                    }
+                    else if (firstChar == "I")
+                    {
+                        if (secondeChar == "V" || secondeChar == "X")
+                        {
+                            totalSum += (secondNo - firstNo);
+                        }
+                        else
+                        {
+                            totalSum = 0;
+                            break;
+                        }
+
+                    }
+                    else if (firstChar == "X")
+                    {
+                        if (secondeChar == "L" || secondeChar == "C")
+                        {
+                            totalSum += (secondNo - firstNo);
+                        }
+                        else
+                        {
+                            totalSum = 0;
+                            break;
+                        }
+                    }
+                    else if (firstChar == "C")
+                    {
+                        if (secondeChar == "D" || secondeChar == "M")
+                        {
+                            totalSum += (secondNo - firstNo);
+                        }
+                        else
+                        {
+                            totalSum = 0;
+                            break;
+                        }
+                    }
+                    else if (firstChar == "V" )
+                    {
+                        if(secondeChar == "I")
+                        {
+                            totalSum += firstNo + secondNo;
+                        }
+                        else
+                        {
+                            totalSum = 0;
+                            break;
+                        }
+                    }
+                    else if (firstChar == "L")
+                    {
+                        if (secondeChar == "I" || secondeChar == "V" || secondeChar == "X")
+                        {
+                            totalSum += firstNo + secondNo;
+                        }
+                        else
+                        {
+                            totalSum = 0;
+                            break;
+                        }
+                    }
+                    else if (firstChar == "D")
+                    {
+                        if (secondeChar == "I" || secondeChar == "V" || secondeChar == "X" || secondeChar == "L" || 
+                            secondeChar == "C")
+                        {
+                            totalSum += firstNo + secondNo;
+                        }
+                        else
+                        {
+                            totalSum = 0;
+                            break;
+                        }
+                    }
+                    else if (firstNo >= secondNo)
+                    {
+                        totalSum += firstNo + secondNo;
+                        break;
+                    }
+
+                }
 
 
+            }
+
+            return totalSum;
         }
 
-        bool IsValidRomanNumeral(string[] romanNumeral)
+        static bool IsValidRomanNumeral(string[] romanNumeral)
         {
-            for (int i = 0; i < romanNumeral.Length; i++)
+            //D,L,V can never be repeated
+            if (romanNumeral.Count(t => t == "D") > 1 ||
+                romanNumeral.Count(t => t == "L") > 1 ||
+                romanNumeral.Count(t => t == "V") > 1)
             {
-                string[] NumeralsToAvoidMoreThanThree = { "I", "X", "C" };
-
-                
-                if(romanNumeral[i] == romanNumeral[i+1] == romanNumeral[i+2] == )
+                return false;
             }
+
+            for (int i = 0; i < romanNumeral.Length; i += 4)
+            {
+                //I,X,C,M can never reapeated more than 3 times sequentially
+                if (romanNumeral.Skip(i).Take(4).Count() == 4 && (romanNumeral.Skip(i).Take(4).All(t => t == "I") ||
+                    romanNumeral.Skip(i).Take(4).All(t => t == "X") ||
+                    romanNumeral.Skip(i).Take(4).All(t => t == "C") ||
+                    romanNumeral.Skip(i).Take(4).All(t => t == "M")))
+                {
+                    return false;
+                }
+            }
+
+
+
+            return true;
         }
     }
 }

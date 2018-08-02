@@ -1,0 +1,6 @@
+D:\ThW\SpaceMetalSeller\bin\Debug\netcoreapp1.1\SpaceMetalSeller.deps.json
+D:\ThW\SpaceMetalSeller\bin\Debug\netcoreapp1.1\SpaceMetalSeller.runtimeconfig.json
+D:\ThW\SpaceMetalSeller\bin\Debug\netcoreapp1.1\SpaceMetalSeller.runtimeconfig.dev.json
+D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.csprojResolveAssemblyReference.cache
+D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.csproj.CoreCompileInputs.cache
+D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.AssemblyInfo.cs

@@ -7045,11 +7045,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Applications\\TW1\\SpaceMetalSeller\\SpaceMetalSeller.csproj",
+      "projectUniqueName": "D:\\ThW\\SpaceMetalSeller\\SpaceMetalSeller.csproj",
       "projectName": "SpaceMetalSeller",
-      "projectPath": "D:\\Applications\\TW1\\SpaceMetalSeller\\SpaceMetalSeller.csproj",
+      "projectPath": "D:\\ThW\\SpaceMetalSeller\\SpaceMetalSeller.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Applications\\TW1\\SpaceMetalSeller\\obj\\",
+      "outputPath": "D:\\ThW\\SpaceMetalSeller\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
