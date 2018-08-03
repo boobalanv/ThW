@@ -7,3 +7,4 @@ D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.AssemblyInfo.cs
 D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.exe
 D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.pdb
 D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.csprojResolveAssemblyReference.cache
+D:\ThW\SpaceMetalSeller\bin\Debug\net461\Input\input.txt

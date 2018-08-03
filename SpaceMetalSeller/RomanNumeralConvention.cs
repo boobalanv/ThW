@@ -152,7 +152,7 @@ namespace SpaceMetalSeller
                 return false;
             }
 
-            for (int i = 0; i < romanNumeral.Length; i += 4)
+            for (int i = 0; i < romanNumeral.Length; i++)
             {
                 //I,X,C,M can never reapeated more than 3 times sequentially
                 if (romanNumeral.Skip(i).Take(4).Count() == 4 && (romanNumeral.Skip(i).Take(4).All(t => t == "I") ||

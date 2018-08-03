@@ -13,3 +13,4 @@ D:\ThW\SpaceMetalSeller.UnitTests\obj\Debug\SpaceMetalSeller.UnitTests.csproj.Co
 D:\ThW\SpaceMetalSeller.UnitTests\obj\Debug\SpaceMetalSeller.UnitTests.dll
 D:\ThW\SpaceMetalSeller.UnitTests\obj\Debug\SpaceMetalSeller.UnitTests.pdb
 D:\ThW\SpaceMetalSeller.UnitTests\bin\Debug\SpaceMetalSeller.exe
+D:\ThW\SpaceMetalSeller.UnitTests\bin\Debug\Input\input.txt
