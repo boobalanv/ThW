@@ -1,0 +1,8 @@
+D:\ThW\SpaceMetalSeller\bin\Debug\net461\SpaceMetalSeller.runtimeconfig.json
+D:\ThW\SpaceMetalSeller\bin\Debug\net461\SpaceMetalSeller.runtimeconfig.dev.json
+D:\ThW\SpaceMetalSeller\bin\Debug\net461\SpaceMetalSeller.exe
+D:\ThW\SpaceMetalSeller\bin\Debug\net461\SpaceMetalSeller.pdb
+D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.csproj.CoreCompileInputs.cache
+D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.AssemblyInfo.cs
+D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.exe
+D:\ThW\SpaceMetalSeller\obj\Debug\net461\SpaceMetalSeller.pdb

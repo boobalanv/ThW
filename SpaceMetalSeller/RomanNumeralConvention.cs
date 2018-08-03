@@ -24,7 +24,7 @@ namespace SpaceMetalSeller
 
         public static int ConvertRomanNumeralToBase10(string romanNumeral)
         {
-            string[] romanNumerals = romanNumeral.Split();
+            string[] romanNumerals = romanNumeral.Select(x => x.ToString()).ToArray();
             int totalSum = 0;
             if (IsValidRomanNumeral(romanNumerals))
             {
@@ -37,14 +37,21 @@ namespace SpaceMetalSeller
                     {
                         secondNo = RomanNumerals[romanNumerals[i + 1]];
                         secondeChar = romanNumerals[i + 1];
-                        i++;
+                        //i++;
+                        if (firstNo > secondNo)
+                        {
+                            secondNo = 0;
+                            secondeChar = "";
+                        }
+                        else
+                            i++;
                     }
 
                     if (secondeChar == "")
                     {
                         totalSum += firstNo;
                     }
-                    else if (firstChar == "I")
+                    else if (firstChar == "I" && secondeChar != "I")
                     {
                         if (secondeChar == "V" || secondeChar == "X")
                         {
@@ -57,7 +64,7 @@ namespace SpaceMetalSeller
                         }
 
                     }
-                    else if (firstChar == "X")
+                    else if (firstChar == "X" && secondeChar != "X")
                     {
                         if (secondeChar == "L" || secondeChar == "C")
                         {
@@ -69,7 +76,7 @@ namespace SpaceMetalSeller
                             break;
                         }
                     }
-                    else if (firstChar == "C")
+                    else if (firstChar == "C" && secondeChar != "C")
                     {
                         if (secondeChar == "D" || secondeChar == "M")
                         {
@@ -81,7 +88,7 @@ namespace SpaceMetalSeller
                             break;
                         }
                     }
-                    else if (firstChar == "V" )
+                    else if (firstChar == "V" && secondeChar != "V")
                     {
                         if(secondeChar == "I")
                         {
@@ -93,7 +100,7 @@ namespace SpaceMetalSeller
                             break;
                         }
                     }
-                    else if (firstChar == "L")
+                    else if (firstChar == "L" && secondeChar != "L")
                     {
                         if (secondeChar == "I" || secondeChar == "V" || secondeChar == "X")
                         {
@@ -105,7 +112,7 @@ namespace SpaceMetalSeller
                             break;
                         }
                     }
-                    else if (firstChar == "D")
+                    else if (firstChar == "D" && secondeChar != "D")
                     {
                         if (secondeChar == "I" || secondeChar == "V" || secondeChar == "X" || secondeChar == "L" || 
                             secondeChar == "C")
@@ -118,10 +125,13 @@ namespace SpaceMetalSeller
                             break;
                         }
                     }
+                    else if(firstNo< secondNo)
+                    {
+                        totalSum += (secondNo - firstNo);
+                    }
                     else if (firstNo >= secondNo)
                     {
-                        totalSum += firstNo + secondNo;
-                        break;
+                        totalSum += firstNo + secondNo;                       
                     }
 
                 }

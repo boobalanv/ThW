@@ -4,3 +4,7 @@ D:\ThW\SpaceMetalSeller\bin\Debug\netcoreapp1.1\SpaceMetalSeller.runtimeconfig.d
 D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.csprojResolveAssemblyReference.cache
 D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.csproj.CoreCompileInputs.cache
 D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.AssemblyInfo.cs
+D:\ThW\SpaceMetalSeller\bin\Debug\netcoreapp1.1\SpaceMetalSeller.dll
+D:\ThW\SpaceMetalSeller\bin\Debug\netcoreapp1.1\SpaceMetalSeller.pdb
+D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.dll
+D:\ThW\SpaceMetalSeller\obj\Debug\netcoreapp1.1\SpaceMetalSeller.pdb
