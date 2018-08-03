@@ -5,25 +5,25 @@ using System.Text;
 
 namespace SpaceMetalSeller
 {
-    public class IntergalacticNotation
+    public static class IntergalacticNotation
     {
-        Dictionary<string, string> UnitCredits = new Dictionary<string, string>();
+       public static Dictionary<string, string> UnitCredits = new Dictionary<string, string>();
 
-        Dictionary<string, float> MetalCredits = new Dictionary<string, float>();
+        public static Dictionary<string, float> MetalCredits = new Dictionary<string, float>();
 
-        public void GetUnitsCredits(string unitString)
+        public static void GetUnitsCredits(string unitString)
         {
-            string[] units = unitString.Split(new string[] { "is" }, StringSplitOptions.None);
+            string[] units = unitString.Split(' ');
 
-            if(!UnitCredits.Keys.Contains(units[0]))
+            if(!UnitCredits.Keys.Contains(units[0].Trim()))
             {
-                UnitCredits.Add(units[0], units[1]);
+                UnitCredits.Add(units[0].Trim(), units[2].Trim());
             }
         }
 
-        public void GetMetalCredits(string metalString)
+        public static void GetMetalCredits(string metalString)
         {
-            string[] metalStmt = metalString.Split(new string[] { "is" }, StringSplitOptions.None);
+            string[] metalStmt = metalString.Split(new string[] { " is " }, StringSplitOptions.None);
 
             string[] unitsMetalStr = metalStmt.FirstOrDefault().Split(' ');
 
